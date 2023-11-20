@@ -49,9 +49,9 @@ if j == 1:
         print("-----------------------------------------------------")
         print("Perdeste, não conseguis te acertar a palavra a tempo, a palavra era", palavra)
 elif j == 0:
-    listapalavras = ["dado", "cachorro", "banana", "computador", "janela", "caneta", "montanha", "sorvete", "praia", "livro",
-        "foguete", "espelho", "chave", "agua", "cadeira", "aviao", "piano", "sapato", "arvores", "bola",
-        "celular", "lapis", "sol", "lua", "mar", "terra", "espada", "tesouro", "fada", "bruxa"]
+    listapalavras = ["dado", "cao", "banana", "computador", "janela", "caneta", "montanha", "gelado", "praia", "livro",
+        "foguete", "espelho", "chave", "agua", "cadeira", "aviao", "piano", "sapato", "arvore", "bola",
+        "telefone", "lapis", "sol", "lua", "mar", "terra", "espada", "tesouro", "fada", "bruxa"]
     x = random.randrange(1, 31)
     palavra = listapalavras[x]
     pala = []
