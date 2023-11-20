@@ -72,16 +72,13 @@ def main():
             cnt += 1  
                   
         i = 0             
-        jogadores[2] = 58
-        jogadores[3] = 57
-
         while True:
                 if vez_jogador[i] == "0":
                     print("-------------------------------------------------------------------------------------------------------------")
                     print("É a vez do jogador ", jogador[i])
                     input()
-                    dado1 = 1#random.randrange(1, 7)
-                    dado2 = 0#random.randrange(1,7)    
+                    dado1 = random.randrange(1, 7)
+                    dado2 = random.randrange(1,7)    
                     print("Conseguiu avançar:", dado1 + dado2,"casas")
                     jogadores[i] = jogadores[i] + (dado1 + dado2)
                     if jogadores[i] >= 90:
@@ -94,6 +91,7 @@ def main():
                     if tabuleiro[jogadores[i] - 1] == "Passáro" and voltas == 1:
                         if dado1 == 6 or dado2 == 6:
                             print("O JOGADOR", jogador[i], "GANHOU")
+                            break
                         elif dado1 == 5 or dado2 == 5:
                             jogadores[i] = 15
                 
@@ -132,8 +130,11 @@ def main():
                                     vez_jogador[i] = "0"
                             elif jogadores[i] == jogadores[cnt]:
                                     vez_jogador[i] = "0"
-                                    
+                                    vez_jogador[cnt] = "poço1"                                
                         cnt += 1
+
+                elif vez_jogador[i] == "poço1":
+                    vez_jogador[i] == "poço"
                         
                 elif vez_jogador[i] == "pur":
                     cnt = 0
@@ -141,7 +142,11 @@ def main():
                         if i != cnt:
                             if jogadores[i] == jogadores[cnt]:
                                 vez_jogador[i] = "0"
+                                vez_jogador[cnt] = "pur1"
                         cnt += 1
+                elif vez_jogador[i] == "pur1":
+                    vez_jogador[i] = "pur"
+                    
                 else:
                     vez_jogador[i] -= 1   
                     if vez_jogador[i] == 0:
