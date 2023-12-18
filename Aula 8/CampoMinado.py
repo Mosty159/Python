@@ -42,76 +42,73 @@ def main():
     
     print(loc_minas)
 
-    i = 0
-    while i < 8:
-            j = 0
-            while j < 8: 
-                for cnt in range(0, n_minas):
+    for i in range(0, n_minas):
+            for j in range(0, n_minas): 
+                    print(i,j)
                     if minas[i][j] == "b":
                         if j == 8:
                             i += 1
                             j = 0
                         else:
                             j += 1
-                    if i == 0:
-                        if j == 0:
-                            if minas[i+1][j] == "b":
-                                minas[i][j] += 1
-                            elif minas[i+1][j+1] == "b":
-                                minas[i][j] += 1
-                            elif minas[i][j+1] == "b":
-                                minas[i][j] += 1
-                        elif j == 8:
-                            if minas[i+1][j] == "b":
-                                minas[i][j] += 1
-                            elif minas[i-1][j-1] == "b":
-                                minas[i][j] += 1
-                            elif minas[i][j-1] == "b":
-                                minas[i][j] += 1
-                        elif minas[i][j+1] == "b":
-                            minas[i][j] += 1
-                        elif minas[i][j-1] == "b":
-                            minas[i][j] += 1
-                        elif minas[i+1][j] == "b":
-                            minas[i][j] += 1
-                        elif minas[i+1][j-1] == "b":
-                            minas[i][j] += 1
-                        elif minas[i+1][j+1] == "b":
-                            minas[i][j] += 1
                     else:
-                        if j == 0:
-                            if minas[i+1][j] == "b":
-                                minas[i][j] += 1
-                            elif minas[i+1][j+1] == "b":
-                                minas[i][j] += 1
+                        if i == 0:
+                            if j == 0:
+                                if minas[i+1][j] == "b":
+                                    minas[i][j] += 1
+                                elif minas[i+1][j+1] == "b":
+                                    minas[i][j] += 1
+                                elif minas[i][j+1] == "b":
+                                    minas[i][j] += 1
+                            elif j == 8:
+                                if minas[i+1][j] == "b":
+                                    minas[i][j] += 1
+                                elif minas[i-1][j-1] == "b":
+                                    minas[i][j] += 1
+                                elif minas[i][j-1] == "b":
+                                    minas[i][j] += 1
                             elif minas[i][j+1] == "b":
-                                minas[i][j] += 1
-                        elif j == 8:
-                            if minas[i+1][j] == "b":
-                                minas[i][j] += 1
-                            elif minas[i-1][j-1] == "b":
                                 minas[i][j] += 1
                             elif minas[i][j-1] == "b":
                                 minas[i][j] += 1
-                        elif minas[i][j+1] == "b":
-                            minas[i][j] += 1
-                        elif minas[i][j-1] == "b":
-                            minas[i][j] += 1
-                        elif minas[i+1][j] == "b":
-                            minas[i][j] += 1
-                        elif minas[i+1][j-1] == "b":
-                            minas[i][j] += 1
-                        elif minas[i+1][j+1] == "b":
-                            minas[i][j] += 1
-                        elif minas[i-1][j] == "b":
-                            minas[i][j] += 1
-                        elif minas[i-1][j-1] == "b":
-                            minas[i][j] += 1
-                        elif minas[i-1][j+1] == "b":
-                            minas[i][j] += 1
+                            elif minas[i+1][j] == "b":
+                                minas[i][j] += 1
+                            elif minas[i+1][j-1] == "b":
+                                minas[i][j] += 1
+                            elif minas[i+1][j+1] == "b":
+                                minas[i][j] += 1
+                        else:
+                            if j == 0:
+                                if minas[i+1][j] == "b":
+                                    minas[i][j] += 1
+                                elif minas[i+1][j+1] == "b":
+                                    minas[i][j] += 1
+                                elif minas[i][j+1] == "b":
+                                    minas[i][j] += 1
+                            elif j == 8:
+                                if minas[i+1][j] == "b":
+                                    minas[i][j] += 1
+                                elif minas[i-1][j-1] == "b":
+                                    minas[i][j] += 1
+                                elif minas[i][j-1] == "b":
+                                    minas[i][j] += 1
+                            elif minas[i][j+1] == "b":
+                                minas[i][j] += 1
+                            elif minas[i][j-1] == "b":
+                                minas[i][j] += 1
+                            elif minas[i+1][j] == "b":
+                                minas[i][j] += 1
+                            elif minas[i+1][j-1] == "b":
+                                minas[i][j] += 1
+                            elif minas[i+1][j+1] == "b":
+                                minas[i][j] += 1
+                            elif minas[i-1][j] == "b":
+                                minas[i][j] += 1
+                            elif minas[i-1][j-1] == "b":
+                                minas[i][j] += 1
+                            elif minas[i-1][j+1] == "b":
+                                minas[i][j] += 1
                     
-                    j += 1
-                i += 1
     
     while True:
         print("-------------------------------------------------------------")
